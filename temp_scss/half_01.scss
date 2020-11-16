@@ -528,3 +528,38 @@ sans-serif;
         }
     }
 }
+
+.to-top {
+    width: 3.2rem;
+    height: 3.2rem;
+    border: 1px solid #fff;
+    background-color: #000;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    &:hover {
+        opacity: 0.75;
+    }
+    &::before,
+    &::after {
+        content: "";
+        width: 1.2rem;
+        height: 0.1rem;
+        background-color: #fff;
+        position: absolute;
+        display: block;
+        top: 1rem;
+    }
+    &::before {
+        transform-origin: top right;
+        left: 0.3rem;
+        transform: rotate(-45deg);
+    }
+    &::after {
+        transform-origin: top left;
+        right: 0.3rem;
+        transform: rotate(45deg);
+    }
+}

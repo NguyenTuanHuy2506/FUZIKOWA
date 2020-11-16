@@ -2,7 +2,7 @@ var _nav = $('.nav');
 var _hambuger = $('.hamburger');
 var _navbar = $('.navbar-collapse');
 var _mark = $('.mark-layout');
-// var _totop = $('.to-top');
+var _totop = $('.to-top');
 
 $(window).on('scroll load resize', function() {
     let _windowW = $(window).innerWidth();
@@ -44,6 +44,16 @@ function _remove() {
     _mark.removeClass('active');
     _check == 1 ? _nav.removeClass('active') : null;
 }
+
+_totop.click(function(e) {
+    e.preventDefault();
+    $("html,body").animate({
+            scrollTop: 0,
+        },
+        1000,
+        "swing"
+    );
+});
 
 var _timeout;
 
