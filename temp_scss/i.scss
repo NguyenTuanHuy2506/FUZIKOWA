@@ -1,11 +1,530 @@
 @charset 'UTF-8';
 @import './functions.scss';
-
-/**
-* 
-*/
-
 // font-family: 'Noto Sans',
 // sans-serif;
+$font_NotoSan: 'Noto Sans',
+sans-serif;
 // font-family: 'Raleway',
 // sans-serif;
+$font_Raleway: 'Raleway',
+sans-serif;
+//Helvetica
+$font_Helvetica: Helvetica,
+sans-serif;
+.nav {
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1024;
+    top: 0;
+    left: 0;
+    transition: all .3s ease;
+    &.active {
+        height: 8rem;
+    }
+    >.mark-layout {
+        position: fixed;
+        z-index: -1;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(#000, .0);
+        visibility: hidden;
+        transition: all .3s ease;
+        &.active {
+            background-color: rgba(#000, .4);
+            visibility: visible;
+        }
+    }
+    @include screen1366 {
+        height: 8rem;
+        &.active {
+            background-color: #161B27;
+        }
+    }
+    &-brand {
+        a {
+            color: inherit;
+        }
+        color: #fff;
+        font-weight: 700;
+        font-size: 4.4rem;
+        font-family: $font_Raleway;
+        margin-left: 4.2rem;
+        transition: all .3s ease;
+        span {
+            font-family: $font_Helvetica;
+            font-size: 2rem;
+            display: block;
+        }
+        &:hover {
+            opacity: .75;
+        }
+        @include near_mobile {
+            font-size: 2.4rem;
+            margin-left: 2rem;
+            span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .navbar-collapse {
+        margin-left: auto;
+        height: 100%;
+        &.active {
+            transform: translateX(0);
+        }
+        @include screen1366 {
+            position: fixed;
+            top: 8rem;
+            right: 0;
+            transition: all .3s ease;
+            transform: translateX(120%);
+        }
+        .navbar-nav {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: #161B27;
+            @include screen1366 {
+                height: calc(100% - 80px);
+            }
+            .nav-item {
+                width: 100%;
+                height: 100%;
+                @include screen1366 {
+                    height: 10rem;
+                }
+                >a {
+                    width: 100%;
+                    max-width: 20rem;
+                    min-width: 20rem;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    // background-color: #161B27;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $font_NotoSan;
+                    font-size: 1.2rem;
+                    color: #fff;
+                    // padding: 0 5rem;
+                    letter-spacing: .2rem;
+                    transition: all .3s ease;
+                    span {
+                        font-size: 2.8rem;
+                        display: block;
+                        margin-bottom: 1rem;
+                    }
+                    @include screen1366 {
+                        max-width: 100%;
+                        // height: 10rem;
+                    }
+                }
+                &.mail {
+                    >a {
+                        max-width: 15rem;
+                        min-width: 15rem;
+                        background-color: #265B2D;
+                        figure {
+                            max-width: 7.8rem;
+                            transition: all .3s ease;
+                            figcaption {
+                                font-size: 1.2rem;
+                                white-space: nowrap;
+                                margin-top: 1rem;
+                            }
+                        }
+                        @include screen1366 {
+                            max-width: 100%;
+                            // height: 10rem;
+                        }
+                    }
+                    @include screen1366 {
+                        margin-top: auto;
+                        margin-bottom: 0rem;
+                    }
+                }
+                &:hover {
+                    >a {
+                        color: rgba(#fff, .75);
+                        figure {
+                            opacity: .75;
+                        }
+                    }
+                }
+            }
+            @include screen1366 {
+                flex-direction: column;
+                width: 320px;
+            }
+            @include near_mobile {
+                width: 100vw;
+            }
+        }
+    }
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 1024;
+    display: none;
+    top: 28px;
+    right: 20px;
+    width: 3rem;
+    height: 2rem;
+    transform-origin: center;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    @media only screen and (max-width: 1300px) {
+        display: block;
+    }
+    span {
+        width: 3rem;
+        height: 0.4rem;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        transition: transform 0.15s ease 0.15s;
+        &:nth-of-type(1) {
+            top: 0;
+        }
+        &:nth-of-type(2) {
+            top: calc(50%);
+        }
+        &:nth-of-type(3) {
+            top: 100%;
+        }
+    }
+    &.active {
+        transform: rotate(-315deg);
+        span {
+            &:nth-of-type(1) {
+                top: calc(50% - 2px);
+            }
+            &:nth-of-type(2) {
+                top: calc(50% - 2px);
+                transform: rotate(90deg);
+            }
+            &:nth-of-type(3) {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.mv {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    .background {
+        width: 100%;
+        height: 100%;
+        max-height: 1080px;
+        overflow: hidden;
+        position: relative;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(84, 84, 84, 0) 100%);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        @include near_mobile {
+            height: calc(100vh - 80px);
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .content {
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 20px;
+        margin: 0 auto;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-34%);
+        h2 {
+            font-size: 10rem;
+            color: #fff;
+            font-family: $font_NotoSan;
+            line-height: 1.4;
+        }
+        p {
+            font-size: 2.4rem;
+            font-family: $font_NotoSan;
+            color: #fff;
+        }
+        @include screen1900 {
+            h2 {
+                font-size: 5.208vw;
+            }
+            p {
+                font-size: 1.25vw;
+            }
+        }
+        @include ipadpro {
+            p {
+                font-size: 1.6rem;
+            }
+        }
+        @include near_ipadpro {
+            h2 {
+                font-size: 3rem;
+            }
+            p {
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+.more-button {
+    height: 6rem;
+    max-width: 23rem;
+    padding: 0 3rem;
+    background-color: #fff;
+    color: #161B27;
+    font-size: 1.8rem;
+    font-family: $font_NotoSan;
+    font-weight: 700;
+    border: .3rem solid #161B27;
+    display: flex;
+    align-items: center;
+    letter-spacing: .2rem;
+    transition: all .3s ease;
+    // justify-content: space-between;
+    span {
+        display: inline-block;
+        margin-left: auto;
+        width: 3.4rem;
+        height: .9rem;
+        border-bottom: 1px solid #161B27;
+        border-right: 1px solid #161B27;
+        transform: skewX(45deg);
+    }
+    &.white {
+        border-color: #fff;
+        color: #fff;
+        background-color: transparent;
+        span {
+            border-color: #fff;
+        }
+    }
+    &:hover {
+        opacity: .75;
+    }
+    @include near_mobile {
+        max-width: 100%;
+        font-size: 1.6rem;
+    }
+}
+
+.fk-symbol {
+    display: inline-block;
+    max-width: 17px;
+}
+
+.new-and-protect {
+    width: 100%;
+    background-color: #161B27;
+    position: relative;
+    display: inline-block;
+    .news {
+        background-color: #fff;
+        padding: 4rem 4rem 5.5rem 4rem;
+        position: relative;
+        transform: translateY(-50px);
+        h3 {
+            font-size: 3rem;
+            font-family: $font_NotoSan;
+            margin-bottom: 3.5rem;
+            letter-spacing: .3rem;
+            font-weight: 400;
+            span {
+                font-size: 1.6rem;
+                display: block;
+                text-indent: 1.2rem;
+                margin-top: 1rem;
+            }
+        }
+        p {
+            // font-family: HiraginoSans;
+            font-size: 2rem;
+            letter-spacing: -.1rem;
+            line-height: 1.4;
+        }
+        .more-button {
+            position: absolute;
+            top: 50%;
+            right: 4rem;
+        }
+        @include screen1900 {
+            h3 {
+                margin-bottom: 1.822vw;
+            }
+            p {
+                font-size: 1.04vw;
+            }
+        }
+        @include ipadpro {
+            padding: 1rem;
+            h3 {
+                margin-bottom: 3rem;
+            }
+            p {
+                font-size: 1.4rem;
+            }
+            .more-button {
+                position: static;
+                margin-top: 3rem;
+            }
+        }
+    }
+    .decor.protect-decor {
+        position: absolute;
+        display: block;
+        bottom: 10rem;
+        right: 0;
+        span {
+            color: #fff;
+            opacity: .1;
+            font-weight: 700;
+            font-family: $font_NotoSan;
+            font-size: 35.4rem;
+            display: block;
+            line-height: .8;
+        }
+        @include screen1900 {
+            span {
+                font-size: 18.4375vw;
+            }
+        }
+    }
+    .protect {
+        position: relative;
+        margin-top: 8rem;
+        h3 {
+            font-family: $font_NotoSan;
+            font-weight: 700;
+            font-size: 5rem;
+            color: #fff;
+            display: inline-block;
+            margin-bottom: 2rem;
+            span {
+                color: #41C348;
+            }
+        }
+        p {
+            font-family: $font_NotoSan;
+            color: #fff;
+            margin-top: 4.5rem;
+            font-weight: 400;
+        }
+        .more-button {
+            margin: 0 auto;
+            border-width: .2rem;
+            font-size: 2.4rem;
+            margin-top: 17.5rem;
+            margin-bottom: 14.5rem;
+        }
+        @include screen1900 {
+            margin-top: 4.17vw;
+            h3 {
+                font-size: 2.604vw;
+            }
+            p {
+                margin-top: 2.34375vw;
+            }
+            .more-button {
+                margin-top: 9.12vw;
+                margin-bottom: 7.55vw;
+            }
+        }
+        @include ipadpro {
+            p {
+                font-size: 1.6rem;
+                br {
+                    display: none;
+                }
+            }
+        }
+        @include near_mobile {
+            h3 {
+                font-size: 2.3rem;
+            }
+            .more-button {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+.protex-core {
+    width: 100%;
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        padding: 13rem 0;
+        @include screen1900 {
+            padding: 6.77vw 0;
+        }
+        .item {
+            width: calc(100% / 4);
+            max-width: 33rem;
+            figure {
+                width: 100%;
+                figcaption>h3 {
+                    font-size: 4rem;
+                    font-family: $font_NotoSan;
+                    color: #161B27;
+                    text-align: center;
+                    margin-top: 1rem;
+                    span {
+                        font-size: 2.8rem;
+                        font-weight: 400;
+                        display: block;
+                    }
+                }
+                @include screen1900 {
+                    figcaption>h3 {
+                        font-size: 2.083vw;
+                        span {
+                            font-size: 1.458vw;
+                        }
+                    }
+                }
+            }
+        }
+        @include near_mobile {
+            flex-wrap: wrap;
+            .item {
+                width: 100%;
+                max-width: calc(50% - 10px);
+                margin-top: 3rem;
+                figure {
+                    figcaption>h3 {
+                        font-size: 2rem;
+                        span {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

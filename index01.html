@@ -17,10 +17,14 @@
     <link href="./assets/css/reset.css" rel="stylesheet">
     <link href="./assets/css/bootstrap_custom.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">
+
     <!-- build:addcss -->
-    <title></title>
+    <link href="./css/i.css" rel="stylesheet">
+
+    <title>i</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/3f086dbc376893f56b4a9c4d3cac5df9?family=Hiragino+Sans+GB" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -29,18 +33,20 @@
         <!-- #region: header-->
         <nav class="nav">
 
-            <h1>
-                FUZIKOWA INDISTY
-                <span>
+            <h1 class="nav-brand">
+                <a href="#">
+                    FUZIKOWA INDISTY
+                    <span>
                         Co..LtD.
                     </span>
+                </a>
             </h1>
 
-            <div>
+            <div class="navbar-collapse">
 
-                <ul>
+                <ul class="navbar-nav">
 
-                    <li>
+                    <li class="nav-item">
                         <a href="#">
                             <span>
                                 NEWS
@@ -48,21 +54,23 @@
                         </a>
                     </li>
 
-                    <li>
+                    <li class="nav-item">
                         <a href="#">
                             <span>
                                 SEVICE
                             </span> 製品紹介
                         </a>
                     </li>
-                    <li>
+
+                    <li class="nav-item">
                         <a href="#">
                             <span>
                                 ABOUT
                             </span> 会社概要
                         </a>
                     </li>
-                    <li>
+
+                    <li class="nav-item mail">
                         <a href="#">
                             <figure>
                                 <img src="./images/i/icon_mail.svg" alt="">
@@ -76,29 +84,172 @@
                 </ul>
 
             </div>
+            <div class="mark-layout"></div>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
         </nav>
         <!-- #endregion -->
     </header>
+
     <main>
 
         <!-- #region: mv -->
         <section class="mv">
-            <figure>
+            <figure class="background">
                 <img src="./images/i/img_banner.jpg" alt="あらゆる環境に
                 対応する
                 豊富な製品群。">
             </figure>
             <div class="content">
                 <h2>
-                    あらゆる環境に 対応する 豊富な製品群。
+                    あらゆる環境に<br />対応する<br />豊富な製品群。
                 </h2>
                 <p>
-                    過酷な環境にも耐えるよう、厳しい製品テストをクリアしたケースは、 様々なプロフェッショナルな現場で活用されています。
+                    過酷な環境にも耐えるよう、厳しい製品テストをクリアしたケースは、<br />様々なプロフェッショナルな現場で活用されています。
                 </p>
             </div>
         </section>
         <!-- #endregion -->
+
+        <!-- #region: news && protection -->
+        <section class="new-and-protect">
+
+            <div class="container-low">
+                <!-- news area -->
+                <div class="news">
+
+                    <h3>
+                        NEWS<span>新着情報</span>
+                    </h3>
+                    <p>
+                        2020.07.01 リモート営業 実施しております
+                    </p>
+                    <p>
+                        フジコーワ工業株式会社ではミーティングツールZoomを用いたオンラインでのお打ち合わせを実施致しております。
+                    </p>
+                    <a class="more-button" href="#">お知らせ一覧
+                        <span></span>
+                    </a>
+
+                </div>
+                <!-- close -->
+
+
+                <!-- protect area -->
+                <div class="decor protect-decor">
+                    <span>
+                        PROTECT
+                    </span>
+                </div>
+
+                <div class="protect">
+
+                    <h3>
+                        基本理念は<span>“PROTECTION”</span>
+                    </h3>
+
+                    <p>
+                        当社のルーツは第二次世界大戦中
+                        <span class="fk-symbol">、</span>陸軍指定工場としての金属製コンテナの生産活動<span class="fk-symbol">、</span>そして戦<br />後の極東米軍に対するアルミ製小型コンテナの供給にあります<span class="fk-symbol">。</span>これらの生産活動を通して蓄積<br />されたノウハウを基に<span class="fk-symbol">、</span>1963年フジコーワ工業として創業
+                        <span class="fk-symbol">。</span>以来アルミケース・アルミトラン<br />ク・キャリングケース・ハードケースの開発・製造・販売に専念してまいりました。
+                    </p>
+
+                    <p>
+                        キャリングケース・コンテナに求められる最大のポイントは<span class="fk-symbol">、</span>大切な品物をさまざまな環境条件<br />から守ること<span class="fk-symbol">。</span>弊社は製品開発の基本理念に<span class="fk-symbol">、</span>常にこの「PROTECTION（プロテクション）」を<br />置き<span class="fk-symbol">、</span>金属から樹脂
+                        <span class="fk-symbol">、</span>小型ケースから大型コンテナまで
+                        <span class="fk-symbol">、</span>信頼できる品質と豊富な製品群でお客<br />様のご要望にお応えします。
+                    </p>
+                    <a class="more-button white" href="#">
+                        製品一覧
+                        <span></span>
+                    </a>
+                </div>
+                <!-- close -->
+            </div>
+
+        </section>
+        <!-- #endregion -->
+
+
+        <!-- #region: PROTEX CORE -->
+        <section class="protex-core">
+            <div class="container-low2">
+
+                <div class="flex">
+
+                    <div class="item">
+
+                        <figure>
+                            <img src="./images/i/img_protex_core.jpg" alt="PROTEX CORE FOR BUSINESS">
+                            <figcaption>
+                                <h3>
+                                    PROTEX CORE
+                                    <span>
+                                        FOR BUSINESS
+                                    </span>
+                                </h3>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+
+                    <div class="item">
+
+                        <figure>
+                            <img src="./images/i/img_protex_core.jpg" alt="PROTEX CORE FOR BUSINESS">
+                            <figcaption>
+                                <h3>
+                                    PROTEX CORE
+                                    <span>
+                                        FOR BUSINESS
+                                    </span>
+                                </h3>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+                    <div class="item">
+
+                        <figure>
+                            <img src="./images/i/img_protex_core.jpg" alt="PROTEX CORE FOR BUSINESS">
+                            <figcaption>
+                                <h3>
+                                    PROTEX CORE
+                                    <span>
+                                        FOR BUSINESS
+                                    </span>
+                                </h3>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+                    <div class="item">
+
+                        <figure>
+                            <img src="./images/i/img_protex_core.jpg" alt="PROTEX CORE FOR BUSINESS">
+                            <figcaption>
+
+                                <h3>
+                                    PROTEX CORE
+                                    <span>
+                                        FOR BUSINESS
+                                    </span>
+                                </h3>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- #endsection -->
 
     </main>
     <footer>
@@ -107,6 +258,7 @@
         <!-- #endregion -->
     </footer>
     <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script src="./js/gerenal.js"></script>
 
 </body>
 

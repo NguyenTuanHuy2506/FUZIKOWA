@@ -27,3 +27,29 @@ body>main {
     padding: 0 20px;
     margin: 0 auto;
 }
+
+.container-low2 {
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: Helvetica, sans-serif;
+    src: url('../assets/plugins/fonts/Helvetica.ttf');
+}
+
+
+/* 
+@font-face {
+    font-family: HiraginoSans, sans-serif;
+    src: url('../assets/plugins/fonts/HiraginoSansGBW6.ttf');
+} */
+
+
+/* @font-face {
+    font-family: "Hiragino Sans GB";
+    src: url("//db.onlinewebfonts.com/t/3f086dbc376893f56b4a9c4d3cac5df9.eot");
+    src: url("//db.onlinewebfonts.com/t/3f086dbc376893f56b4a9c4d3cac5df9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/3f086dbc376893f56b4a9c4d3cac5df9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/3f086dbc376893f56b4a9c4d3cac5df9.woff") format("woff"), url("//db.onlinewebfonts.com/t/3f086dbc376893f56b4a9c4d3cac5df9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/3f086dbc376893f56b4a9c4d3cac5df9.svg#Hiragino Sans GB") format("svg");
+} */
