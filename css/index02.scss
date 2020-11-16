@@ -1,4 +1,9 @@
 @import "../scss/variables.scss";
+@mixin CSSIE() {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
+    }
+}
 body {
     font-family: "Noto Sans", sans-serif;
 }
@@ -168,6 +173,11 @@ body {
     .text-schedule {
         padding-bottom: 55px;
         font-size: 2.4rem;
+    }
+    @include CSSIE{
+        .container{
+            max-width: 100%;
+        }
     }
 }
 footer.footer {
