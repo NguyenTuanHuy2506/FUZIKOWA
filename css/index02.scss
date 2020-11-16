@@ -1,0 +1,181 @@
+@import "../scss/variables.scss";
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+.hi-fa-mo {
+    .content-hi-fa-mo {
+        display: flex;
+        justify-content: space-between;
+        .text-div {
+            max-width: 640px;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h3.title {
+                font-size: 14.2rem;
+            }
+            span {
+                font-size: 1.8rem;
+                line-height: 1.6;
+            }
+        }
+        .img {
+            max-width: calc(100% - 640px);
+            // width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+.bg-blue {
+    background-color: $blue;
+    h3.title,
+    span {
+        color: white;
+    }
+}
+.bg-black {
+    background-color: $black-bg;
+    h3.title,
+    span {
+        color: white;
+    }
+}
+.phone-contact-content {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+.phone-contact {
+    height: 570px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a.title {
+        font-size: 9.2rem;
+        color: $black;
+        display: block;
+        padding-bottom: 20px;
+        transition: 0.3s ease-in-out;
+        span {
+            font-size: 3.2rem;
+            display: block;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    a.btn-email {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        border: 3px solid $black;
+        height: 80px;
+        transition: 0.3s ease-in-out;
+        -webkit-box-shadow: 6px 6px 10px -2px rgba(66, 66, 66, 1);
+        -moz-box-shadow: 6px 6px 10px -2px rgba(66, 66, 66, 1);
+        box-shadow: 6px 6px 10px -2px rgba(66, 66, 66, 1);
+        &:hover {
+            opacity: 0.8;
+            span.arrow {
+                transform: translate(10px, -50%);
+            }
+        }
+        span.text {
+            font-size: 2.4rem;
+            font-weight: bold;
+            color: $black;
+        }
+        span.arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 40px;
+            width: 45px;
+            height: 10px;
+            overflow: hidden;
+            display: block;
+            transition: 0.3s ease-in-out;
+            &:before {
+                content: "";
+                width: 45px;
+                height: 2px;
+                background-color: $black-bg;
+                position: absolute;
+                bottom: 2px;
+                left: 0;
+            }
+            &:after {
+                content: "";
+                width: 10px;
+                height: 2px;
+                background-color: $black-bg;
+                position: absolute;
+                bottom: 5px;
+                right: -1px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .text-schedule {
+        padding-bottom: 55px;
+        font-size: 2.4rem;
+    }
+}
+footer.footer {
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        .content {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .list-footer {
+        h5.title {
+            font-size: 2.4rem;
+            font-weight: bold;
+        }
+    }
+}
+@media screen and (min-width: 1921px) {
+    .hi-fa-mo {
+        .content-hi-fa-mo {
+            .text-div {
+                max-width: none;
+                width: 33%;
+            }
+            .img {
+                max-width: none;
+                width: 67%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1250px) {
+    .hi-fa-mo {
+        .content-hi-fa-mo {
+            .text-div {
+                max-width: 520px;
+                h3.title {
+                    font-size: 6rem;
+                }
+                .text {
+                    font-size: 1.4rem;
+                }
+            }
+            .img {
+                max-width: calc(100% - 520px);
+            }
+        }
+    }
+}
