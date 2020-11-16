@@ -1,8 +1,8 @@
 @charset "UTF-8";
-
 body {
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
-    font-size: 1.6rem;
+    font-size: 2.4rem;
+    background-color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -12,11 +12,18 @@ body {
 }
 
 body>main {
-    -ms-overflow-x: hidden;
+    overflow: hidden;
 }
 
 @supports (-ms-ime-align: auto) {
     body>main {
         overflow: hidden;
     }
+}
+
+.container-low {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
 }

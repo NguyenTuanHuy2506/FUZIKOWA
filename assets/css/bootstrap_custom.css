@@ -1,4 +1,4 @@
-/*!
+z/*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -250,17 +250,19 @@ template {
 
 .container {
     width: 100%;
-    max-width: 1120px;
-    padding: 0;
+    max-width: 1160px;
+    padding: 0 20px;
     margin-right: auto;
     margin-left: auto;
 }
 
+/*
 @media (max-width: 1024px) {
     .container {
        padding: 0 20px;
     }
 }
+*/
 
 .container-fluid {
     width: 100%;
