@@ -3,3 +3,4 @@ node_modules
 *.scss
 gulpfile.js
 index02.css
+package-lock.json
