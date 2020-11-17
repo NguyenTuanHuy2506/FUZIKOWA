@@ -4,10 +4,8 @@
         @content;
     }
 }
-body {
-    font-family: "Noto Sans", sans-serif;
-}
 .hi-fa-mo {
+    font-family: "Noto Sans", sans-serif !important;
     .img-2 {
         display: none;
     }
@@ -15,8 +13,8 @@ body {
         display: flex;
         justify-content: space-between;
         .text-div {
-            max-width: 640px;
-            width: 100%;
+            // max-width: 640px;
+            width: 33%;
             padding: 10px;
             display: flex;
             justify-content: center;
@@ -25,11 +23,11 @@ body {
             position: relative;
             cursor: pointer;
             h3.title {
-                font-size: 14.2rem;
+                font-size: 7.34vw;
                 transition: 0.3s ease-in-out;
             }
             span {
-                font-size: 1.8rem;
+                font-size: 0.94vw;
                 line-height: 1.6;
                 transition: 0.5s ease-in-out;
             }
@@ -68,11 +66,15 @@ body {
             }
         }
         .img {
-            max-width: calc(100% - 640px);
-            // width: 100%;
+            // max-width: calc(100% - 640px);
+            width: 67%;
             img {
                 width: 100%;
             }
+        }
+        .img-1,
+        .img-center {
+            width: 33%;
         }
     }
 }
@@ -96,6 +98,7 @@ body {
     margin: auto;
 }
 .phone-contact {
+    font-family: "Noto Sans", sans-serif !important;
     height: 570px;
     display: flex;
     justify-content: center;
@@ -104,8 +107,9 @@ body {
         font-size: 9.2rem;
         color: $black;
         display: block;
-        padding-bottom: 20px;
+        padding-bottom: 1.5rem;
         transition: 0.3s ease-in-out;
+        white-space: nowrap;
         span {
             font-size: 3.2rem;
             display: block;
@@ -171,16 +175,17 @@ body {
         }
     }
     .text-schedule {
-        padding-bottom: 55px;
+        padding-bottom: 4.5rem;
         font-size: 2.4rem;
     }
-    @include CSSIE{
-        .container{
+    @include CSSIE {
+        .container {
             max-width: 100%;
         }
     }
 }
 footer.footer {
+    font-family: "Noto Sans", sans-serif !important;
     background-color: #ebeef0;
     .footer-content {
         padding-top: 100px;
@@ -251,35 +256,36 @@ footer.footer {
     .hi-fa-mo {
         .content-hi-fa-mo {
             .inside-content {
+                padding: 10px;
                 h4.title {
                     font-size: 2rem;
                 }
                 p.text {
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
                     line-height: 2rem;
                 }
             }
         }
     }
 }
-@media screen and (max-width: 1350px) {
-    .hi-fa-mo {
-        .content-hi-fa-mo {
-            .text-div {
-                max-width: 520px;
-                h3.title {
-                    font-size: 6rem;
-                }
-                .text {
-                    font-size: 1.4rem;
-                }
-            }
-            .img {
-                max-width: calc(100% - 520px);
-            }
-        }
-    }
-}
+// @media screen and (max-width: 1350px) {
+//     .hi-fa-mo {
+//         .content-hi-fa-mo {
+//             .text-div {
+//                 max-width: 520px;
+//                 h3.title {
+//                     font-size: 6rem;
+//                 }
+//                 .text {
+//                     font-size: 1.4rem;
+//                 }
+//             }
+//             .img {
+//                 max-width: calc(100% - 520px);
+//             }
+//         }
+//     }
+// }
 @media screen and (max-width: 1200px) {
     footer.footer {
         .footer-content {
@@ -299,6 +305,22 @@ footer.footer {
     }
 }
 @media screen and (max-width: 992px) {
+    .hi-fa-mo {
+        .content-hi-fa-mo {
+            .text-div {
+                max-width: 520px;
+                h3.title {
+                    font-size: 9rem;
+                }
+                .text {
+                    font-size: 1.4rem;
+                }
+            }
+            .img {
+                max-width: calc(100% - 520px);
+            }
+        }
+    }
     .hi-fa-mo {
         .first-block {
             flex-direction: column-reverse;
@@ -338,7 +360,7 @@ footer.footer {
             justify-content: flex-start;
             padding-top: 3rem;
             .content {
-                margin-top: 40px;
+                margin-top: 2.5rem;
                 width: 100%;
                 max-width: 100%;
                 .li-2 {
@@ -370,7 +392,7 @@ footer.footer {
             .text-div {
                 padding: 40px 20px;
                 h3.title {
-                    font-size: 3rem;
+                    font-size: 5rem;
                     margin-bottom: 10px;
                 }
                 p.text {
@@ -392,6 +414,7 @@ footer.footer {
             font-size: 1.6rem;
         }
         a.btn-email {
+            height: 6rem;
             span.text {
                 font-size: 1.6rem;
             }
