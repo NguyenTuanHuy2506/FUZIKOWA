@@ -43,9 +43,6 @@ sans-serif;
     }
     @include screen1366 {
         height: 8rem;
-        // &.active {
-        //     background-color: #161B27;
-        // }
     }
     &-brand {
         a {
@@ -65,9 +62,11 @@ sans-serif;
         &:hover {
             opacity: .75;
         }
-        @include near_mobile {
+        @include screen1366 {
             font-size: 2.4rem;
             margin-left: 2rem;
+        }
+        @include near_mobile {
             span {
                 font-size: 1.2rem;
             }
@@ -79,7 +78,7 @@ sans-serif;
         &.active {
             transform: translateX(0);
         }
-        @include screen1366 {
+        @include mobile {
             position: fixed;
             top: 8rem;
             right: 0;
@@ -91,14 +90,28 @@ sans-serif;
             height: 100%;
             display: flex;
             background-color: #161B27;
-            @include screen1366 {
+            @include mobile {
                 height: calc(100% - 80px);
             }
             .nav-item {
                 // width: 100%;
                 // height: 100%;
                 @include screen1366 {
-                    height: 10rem;
+                    height: 8rem;
+                }
+                @include mobile {
+                    &:nth-of-type(1) {
+                        order: 3;
+                    }
+                    &:nth-of-type(2) {
+                        order: 2;
+                    }
+                    &:nth-of-type(3) {
+                        order: 1;
+                    }
+                    &:nth-of-type(4) {
+                        order: 10;
+                    }
                 }
                 >a {
                     width: 100%;
@@ -122,8 +135,26 @@ sans-serif;
                         letter-spacing: .2rem;
                     }
                     @include screen1366 {
-                        max-width: 100%;
+                        max-width: 14.5rem;
+                        min-width: 14.5rem;
+                        // max-width: 100%;
                         // height: 10rem;
+                        span {
+                            font-size: 2.2rem;
+                        }
+                    }
+                    @include near_ipadpro {
+                        max-width: 11.5rem;
+                        min-width: 11.5rem;
+                        // max-width: 100%;
+                        // height: 10rem;
+                        span {
+                            font-size: 2.2rem;
+                        }
+                    }
+                    @include mobile {
+                        max-width: 100%;
+                        height: 10rem;
                     }
                 }
                 &.mail {
@@ -141,8 +172,15 @@ sans-serif;
                             }
                         }
                         @include screen1366 {
+                            max-width: 12rem;
+                            min-width: 12rem;
+                            figure {
+                                max-width: 7rem;
+                            }
+                        }
+                        @include mobile {
                             max-width: 100%;
-                            // height: 10rem;
+                            padding-bottom: 1.2rem;
                         }
                     }
                     @include screen1366 {
@@ -159,7 +197,7 @@ sans-serif;
                     }
                 }
             }
-            @include screen1366 {
+            @include mobile {
                 flex-direction: column;
                 width: 320px;
             }
@@ -183,7 +221,7 @@ sans-serif;
     background-color: transparent;
     outline: none;
     border: 0;
-    @media only screen and (max-width: 1366px) {
+    @media only screen and (max-width: 768px) {
         display: block;
     }
     span {
