@@ -435,8 +435,15 @@ footer.footer {
                 .list-footer {
                     margin-top: 2rem;
                     width: 100% !important;
+                    h5.title{
+                        font-size: 1.6rem;
+                        margin-bottom: 1rem;
+                    }
                 }
             }
+        }
+        .footer-low{
+            height: 6rem;
         }
     }
 }
