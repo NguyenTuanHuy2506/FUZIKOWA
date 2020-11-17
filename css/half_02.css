@@ -1,6 +1,11 @@
 .hi-fa-mo {
     font-family: "Noto Sans", sans-serif !important;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .hi-fa-mo {
+        overflow: hidden;
+    }
+}
 .hi-fa-mo .img-2 {
     display: none;
 }

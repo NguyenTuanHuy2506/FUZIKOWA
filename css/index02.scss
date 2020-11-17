@@ -6,6 +6,9 @@
 }
 .hi-fa-mo {
     font-family: "Noto Sans", sans-serif !important;
+    @include CSSIE {
+        overflow: hidden;
+    }
     .img-2 {
         display: none;
     }
