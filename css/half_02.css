@@ -298,7 +298,8 @@ footer.footer .footer-low span {
         justify-content: space-between;
     }
     .hi-fa-mo .img-center img {
-        width: 50% !important;
+        width: 50vw !important;
+        height: calc(50vw * 0.625);
     }
     .hi-fa-mo .content-hi-fa-mo {
         flex-wrap: wrap;

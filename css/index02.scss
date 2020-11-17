@@ -338,7 +338,8 @@ footer.footer {
             display: flex;
             justify-content: space-between;
             img {
-                width: 50% !important;
+                width: 50vw !important;
+                height: calc(50vw * 0.625);
             }
         }
         .content-hi-fa-mo {
