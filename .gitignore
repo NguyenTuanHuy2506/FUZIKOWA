@@ -1,3 +1,6 @@
 node_modules
 *.css.map
+*.scss
+gulpfile.js
+index02.css
 package-lock.json
