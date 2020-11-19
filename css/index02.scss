@@ -4,6 +4,30 @@
         @content;
     }
 }
+.hamburger {
+    cursor: pointer;
+}
+.news-a {
+    color: #333333;
+}
+.news-a p {
+    transition: 0.3s ease-in-out;
+}
+.news-a:hover p {
+    opacity: 0.8;
+}
+.protex-core {
+    .item {
+        figure {
+            transition: 0.3s ease-in-out;
+        }
+        &:hover {
+            figure {
+                opacity: 0.8;
+            }
+        }
+    }
+}
 .hi-fa-mo {
     font-family: "Noto Sans", sans-serif !important;
     @include CSSIE {
@@ -107,6 +131,9 @@
     justify-content: center;
     align-items: center;
     a.title {
+        display: none;
+    }
+    p.title {
         font-size: 9.2rem;
         color: $black;
         display: block;
@@ -118,9 +145,6 @@
             display: block;
             padding-bottom: 20px;
             font-weight: bold;
-        }
-        &:hover {
-            opacity: 0.8;
         }
     }
     a.btn-email {
@@ -355,7 +379,7 @@ footer.footer {
         }
     }
     .phone-contact {
-        a.title {
+        p.title {
             font-size: 5rem;
         }
     }
@@ -408,10 +432,24 @@ footer.footer {
     .phone-contact {
         height: unset;
         padding: 40px 0;
+        p.title {
+            display: none !important;
+        }
         a.title {
+            display: block;
             font-size: 3rem;
+            transition: 0.3s ease-in-out;
+            color: #161b27;
+            padding-bottom: 1.5rem;
             span {
                 font-size: 2rem;
+                display: block;
+                color: #161b27;
+                padding-bottom: 2rem;
+                font-weight: bold;
+            }
+            &:hover {
+                opacity: 0.8;
             }
         }
         p.text-schedule {
@@ -435,14 +473,14 @@ footer.footer {
                 .list-footer {
                     margin-top: 2rem;
                     width: 100% !important;
-                    h5.title{
+                    h5.title {
                         font-size: 1.6rem;
                         margin-bottom: 1rem;
                     }
                 }
             }
         }
-        .footer-low{
+        .footer-low {
             height: 6rem;
         }
     }

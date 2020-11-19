@@ -1,3 +1,27 @@
+.hamburger {
+    cursor: pointer;
+}
+
+.news-a {
+    color: #333333;
+}
+
+.news-a p {
+    transition: 0.3s ease-in-out;
+}
+
+.news-a:hover p {
+    opacity: 0.8;
+}
+
+.protex-core .item figure {
+    transition: 0.3s ease-in-out;
+}
+
+.protex-core .item:hover figure {
+    opacity: 0.8;
+}
+
 .hi-fa-mo {
     font-family: "Noto Sans", sans-serif !important;
 }
@@ -102,6 +126,9 @@
     align-items: center;
 }
 .phone-contact a.title {
+    display: none;
+}
+.phone-contact p.title {
     font-size: 9.2rem;
     color: #161b27;
     display: block;
@@ -109,14 +136,11 @@
     transition: 0.3s ease-in-out;
     white-space: nowrap;
 }
-.phone-contact a.title span {
+.phone-contact p.title span {
     font-size: 3.2rem;
     display: block;
     padding-bottom: 20px;
     font-weight: bold;
-}
-.phone-contact a.title:hover {
-    opacity: 0.8;
 }
 .phone-contact a.btn-email {
     display: flex;
@@ -312,7 +336,7 @@ footer.footer .footer-low span {
     .hi-fa-mo .content-hi-fa-mo .text-div {
         padding: 30px 0;
     }
-    .phone-contact a.title {
+    .phone-contact p.title {
         font-size: 5rem;
     }
     footer.footer .footer-content {
@@ -357,11 +381,25 @@ footer.footer .footer-low span {
         height: unset;
         padding: 40px 0;
     }
+    .phone-contact p.title {
+        display: none !important;
+    }
     .phone-contact a.title {
+        display: block;
         font-size: 3rem;
+        transition: 0.3s ease-in-out;
+        color: #161b27;
+        padding-bottom: 1.5rem;
     }
     .phone-contact a.title span {
         font-size: 2rem;
+        display: block;
+        color: #161b27;
+        padding-bottom: 2rem;
+        font-weight: bold;
+    }
+    .phone-contact a.title:hover {
+        opacity: 0.8;
     }
     .phone-contact p.text-schedule {
         font-size: 1.6rem;
