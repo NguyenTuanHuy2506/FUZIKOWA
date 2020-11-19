@@ -8,9 +8,14 @@ $(window).on('scroll load resize', function() {
     let _windowW = $(window).innerWidth();
 
     if (window.pageYOffset > 0) {
+
         _nav.addClass('active');
     } else {
-        _nav.removeClass('active');
+        _hambuger.hasClass('active') ? null : _nav.removeClass('active');
+        // _nav.removeClass('active');
+    }
+    if (_windowW > 768) {
+        _remove();
     }
 });
 
